@@ -4,7 +4,7 @@
 /***********************/
 
 /*
-Факториал через рекурсию
+Числа Фиббоначи через рекурсию
 */
 
 //Метод с указанием автора
@@ -16,18 +16,13 @@ void Author()
     Console.WriteLine();
 }
 
-double Factorial(double num)
+double Fibbonacci (double num)
 {
-    if (num == 1)
-        return 1;
-    else if (num == 0)
+    if ((num == 1) || (num == 2))
         return 1;
     else
-        return num * Factorial(num - 1);
+        return Fibbonacci(num - 1) + Fibbonacci(num - 2);
 }
-
-Console.Write("Введите число, для которого нужно посчитать факториал = ");
+Console.Write("Введите число для подсчёт суммы чисел Фиббоначи = ");
 int.TryParse(Console.ReadLine(), out int number);
-Console.WriteLine($"{number}! = {Factorial(number)}");
-
-Author();
+Console.WriteLine($"{number} = {Fibbonacci(number)}");
