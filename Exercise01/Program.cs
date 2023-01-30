@@ -75,3 +75,5 @@ void FillImage(int row, int columns)
 PrintArray(matrix);
 FillImage(13, 13);
 PrintArray(matrix);
+
+Author();
