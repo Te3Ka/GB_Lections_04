@@ -15,6 +15,21 @@ void Author()
     Console.WriteLine();
 }
 
+void PrintArray (int[,] printMatrix)
+{
+    for(int i = 0; i < printMatrix.GetLength(0); i++)
+    {
+        for(int j = 0; j < printMatrix.GetLength(1); j++)
+        {
+            if(printMatrix[i, j] == 0)
+                Console.Write($"  ");
+            else
+                Console.Write($"{printMatrix[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+}
+
 int[,] matrix = new int[,]
 {
     { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -40,5 +55,6 @@ int[,] matrix = new int[,]
     { 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0},
     { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0},
     { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-
 };
+
+PrintArray(matrix);
